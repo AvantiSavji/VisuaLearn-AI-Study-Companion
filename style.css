@@ -1,0 +1,157 @@
+/* ==== GOOGLE FONTS & GENERAL STYLES ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f4f9; 
+    color: #333;
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling of the whole page */
+}
+
+/* ==== DASHBOARD LAYOUT ==== */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==== SIDEBAR STYLES ==== */
+.sidebar {
+    width: 260px;
+    background-color: #1e293b; /* Dark slate blue */
+    color: #e2e8f0; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    flex-shrink: 0; /* Prevents sidebar from shrinking */
+}
+
+.sidebar-header h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.sidebar-links {
+    list-style-type: none;
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icon and text */
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #cbd5e1; /* Slightly muted text */
+    margin-bottom: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-links li a:hover,
+.sidebar-links li a.active {
+    background-color: #334155; /* Darker highlight on hover/active */
+    color: #ffffff;
+}
+
+/* ==== MAIN CONTENT STYLES ==== */
+.main-content {
+    flex-grow: 1; /* Takes up the remaining space */
+    padding: 40px;
+    overflow-y: auto; /* Allows only this section to scroll */
+}
+
+.main-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0f172a; /* Very dark blue */
+}
+
+.main-header p {
+    color: #64748b; /* Grey text */
+    margin-top: 5px;
+}
+
+/* ==== INPUT & OUTPUT SECTIONS ==== */
+.input-section, .output-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+textarea#userInput {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+    resize: vertical; /* Allows user to resize height only */
+}
+
+textarea#userInput:focus {
+    outline: none;
+    border-color: #3b82f6; /* Blue highlight on focus */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#summarizeBtn {
+    background-color: #3b82f6; /* Blue */
+    color: white;
+}
+button#summarizeBtn:hover { background-color: #2563eb; }
+
+button#simplifyBtn {
+    background-color: #16a34a; /* Green */
+    color: white;
+}
+button#simplifyBtn:hover { background-color: #15803d; }
+
+button#quizBtn {
+    background-color: #9333ea; /* Purple */
+    color: white;
+}
+button#quizBtn:hover { background-color: #7e22ce; }
+
+
+.output-container {
+    min-height: 100px;
+    background-color: #f8fafc; /* Very light grey */
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 20px;
+    color: #475569;
+}

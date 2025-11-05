@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisuaLearn - AI Study Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>VisuaLearn</h2>
+            </div>
+            <ul class="sidebar-links">
+                <li><a href="#" class="active"><span class="material-symbols-outlined">dashboard</span> Dashboard</a></li>
+                <!-- <li><a href="#"><span class="material-symbols-outlined">summarize</span> Summarize</a></li>
+                <li><a href="#"><span class="material-symbols-outlined">psychology_alt</span> Simplify</a></li>
+                <li><a href="#"><span class="material-symbols-outlined">quiz</span> Quizzes</a></li>
+                <li><a href="#"><span class="material-symbols-outlined">settings</span> Settings</a></li> -->
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Welcome!</h1>
+                <p>What would you like to learn today?</p>
+            </header>
+
+            <section class="input-section">
+                <h3>New Study Session</h3>
+                <textarea id="userInput" placeholder="Paste your text here..."></textarea>
+                <div class="action-buttons">
+                    <button id="summarizeBtn">Summarize</button>
+                    <button id="simplifyBtn">Simplify</button>
+                    <button id="quizBtn">Generate Quiz</button>
+                </div>
+            </section>
+
+            <section class="output-section">
+                <h3>Your Result</h3>
+                <div id="outputContainer" class="output-container">
+                    <p>Your summarized text, simplified explanation, or quiz questions will be displayed here once you submit your text.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
